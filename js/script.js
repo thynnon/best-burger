@@ -127,6 +127,7 @@
           cards.forEach((card) => {
             const show = cat === "all" || card.dataset.cat === cat;
             card.style.display = show ? "" : "none";
+            if (show) card.classList.add("in");
           });
         });
       });
@@ -168,6 +169,4 @@
 
     /* ---------- Surligne le jour courant (horaires) ---------- */
     const todayRow = document.querySelector(`[data-day="${new Date().getDay()}"]`);
-    if (todayRow) todayRow.classList.add("today");
-  });
-})();
+    if (todayRo
